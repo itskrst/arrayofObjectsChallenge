@@ -1,0 +1,27 @@
+package c3;
+
+public class Students {
+	
+	private String firstName, lastName;
+	private String year, course, section;
+	
+	Students(String firstName, String lastName, String year, String course, String section){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.year = year;
+		this.course = course;
+		this.section = section;
+	}
+	
+	public void showInput() {
+
+		System.out.println("Full name: " + firstName +  " " + lastName);
+		System.out.println("Year: " + year);
+		System.out.println("Course: " + course);
+		System.out.println("Section: " + section);
+
+	}
+	
+	
+
+}
