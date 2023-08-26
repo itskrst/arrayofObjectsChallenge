@@ -1,0 +1,57 @@
+package c3;
+
+import java.util.Scanner;
+
+public class pointMain {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner s = new Scanner(System.in);
+		
+		System.out.print("Enter the number of students to be registered: ");
+		int numStudents = s.nextInt();
+		s.nextLine();
+		
+        Students[] students = new Students[numStudents];
+        
+        for (int i = 0; i < numStudents; i++) {
+        	
+            System.out.println("- Student " + (i + 1) + " -");
+        
+            
+		System.out.print("Enter First Name: ");
+		String first = s.nextLine();
+		
+		System.out.print("Enter Last Name: ");
+		String Last = s.nextLine();
+		
+		System.out.print("Enter Year: ");
+		String yr = s.nextLine();
+		
+		System.out.print("Enter Course: ");
+		String crs = s.nextLine();
+		
+		System.out.print("Enter Section: ");
+		String sec = s.nextLine();
+		
+		System.out.println();
+		
+		students[i] = new Students(first, Last, yr, crs, sec);
+
+        }
+        
+        
+        System.out.println("Registered Students:");
+        System.out.println();
+        
+        for (int i = 0; i < numStudents; i++) {
+            System.out.println("Student " + (i + 1) + ":");
+            students[i].showInput();
+            System.out.println();
+        }
+
+        s.close();
+	}
+
+}
